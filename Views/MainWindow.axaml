@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Memory.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Memory.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Memory">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel
+        
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <Grid
+            ColumnDefinitions="100, 100"
+            RowDefinitions="100, 100"
+            Name="Cards">
+        
+            <Border Grid.Column="0" Grid.Row="0" Background="BlueViolet" Margin="10" >
+                <TextBlock Text="Me" HorizontalAlignment="Center" VerticalAlignment="Center" Name="Test1" IsVisible="True" Tag="card" FontSize="24" FontWeight="Bold"></TextBlock>
+            </Border>
+            
+            <Border Grid.Column="1" Grid.Row="0" Background="BlueViolet" Margin="10" >
+                <TextBlock Text="m" HorizontalAlignment="Center" VerticalAlignment="Center" Name="Test2" IsVisible="True" Tag="card" FontSize="24" FontWeight="Bold"></TextBlock>
+            </Border>
+            
+            <Border Grid.Column="0" Grid.Row="1" Background="BlueViolet" Margin="10" >
+                <TextBlock Text="o" HorizontalAlignment="Center" VerticalAlignment="Center" Name="Test3" IsVisible="True" Tag="card" FontSize="24" FontWeight="Bold"></TextBlock>
+            </Border>
+            
+            <Border Grid.Column="1" Grid.Row="1" Background="BlueViolet" Margin="10" >
+                <TextBlock Text="ry" HorizontalAlignment="Center" VerticalAlignment="Center" Name="Test4" IsVisible="True" Tag="card" FontSize="24" FontWeight="Bold"></TextBlock>
+            </Border>
+        </Grid>
+        <Button Click="NewGame">New Game</Button>
+        
+        
+    </StackPanel>
+
+</Window>
